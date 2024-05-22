@@ -1,5 +1,30 @@
 {% extends 'index.html' %}
 
 {% block body %}
-projects
+<main class="container ">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 text-center mt-5">
+            <form method="POST" class="card card-body">
+                {% csrf_token %}
+                <h1 class="text-center mb-5">Registrarse</h1>
+                <p class="text-danger">{{error}}</p>
+                <div class="mb-3">
+                    <input type="text" name="name" id="name" placeholder="name" class="form-control"
+                        required autofocus>
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="email" id="email" placeholder="" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="description" id="" placeholder="Password" class="form-control"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <input type="image" name="image" id="image" class="form-control" required>
+                </div>
+                <button class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</main>
 {% endblock %}

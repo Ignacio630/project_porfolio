@@ -1,0 +1,29 @@
+body 
+{
+    background-color: rgb(10, 25, 47);
+    color: #64fadd;
+    font-family:  'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+}
+
+span 
+{   
+    color: #64fadd;
+}
+
+
+.home-icon
+{
+    text-shadow: 0 0 10xp, #64fadd;
+}
+
+.home-icon:hover
+{
+    text-shadow: 0 0 10px, #64fadd;
+    scale: 2;
+}
+
+.bg-primary
+{
+    background-color: #64fadd;
+}
+

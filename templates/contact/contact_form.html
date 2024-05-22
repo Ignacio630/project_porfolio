@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-4 offset-md-4 text-center mt-5">
+            <form method="POST" class="card card-body">
+                {% csrf_token %}
+                <h1 class="text-center mb-3">Contact me!</h1>
+                <p class="text-danger">{{error}}</p>
+                <div class="mb-3">
+                    <input type="email" name="email" id="email" placeholder="Email" class="form-control" required>
+                </div>
+                <div class="dropdown-center mb-3 ">
+                    <button class="btn bg-primary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">Reasons</button>
+                    <ul class="dropdown-menu w-100 ">
+                      <li><a class="dropdown-item" href="#">Project</a></li>
+                      <li><a class="dropdown-item" href="#">Job offer</a></li>
+                    </ul>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="floatingTextarea" style="height: 200px;"></textarea>
+                  </div>
+                <button class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
